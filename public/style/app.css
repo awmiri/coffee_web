@@ -602,27 +602,6 @@ video {
   src: url("../fonts/Morabba/Morabba-Bold.woff2") format("woff");
 }
 
-.font-MorabbaMedium {
-  font-family: Morabba Medium;
-}
-
-.font-MorabbaBold {
-  font-family: Morabba Bold;
-}
-
-.font-Dana {
-  font-family: Dana;
-}
-
-.font-DanaMedium {
-  font-family: Dana Medium;
-}
-
-.font-DanaDemiBold {
-  font-family: Dana DemiBold;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.hidden {
+  display: none;
 }
