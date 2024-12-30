@@ -33,4 +33,8 @@
     src: local("Morabba Bold");
     src: url("../fonts/Morabba/Morabba-Bold.woff2") format("woff");
   }
+  body {
+    background-image: url("../image/headerBgDesktop.png");
+    background-repeat: no-repeat;
+  }
 }
