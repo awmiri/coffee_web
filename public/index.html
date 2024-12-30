@@ -27,18 +27,19 @@
     <header class=" fixed top-14 right-0 left-0 flex items-center w-[90%] h-24 bg-black/50 backdrop-blur-[6px] mx-auto py-5 px-10 rounded-3xl">
         <div class="flex  w-full justify-between ">
              <!-- title & logo -->
-             <nav class="flex items-center gap-9">
+             <nav class="flex items-center gap-9 h-14">
                 <!-- logo -->
-                <img src="./image/app-logo.png" alt="GOLDEN COFFEE" class="h-14">
+                <img src="./image/app-logo.png" alt="GOLDEN COFFEE">
                 <!-- title -->
-                <ul class="flex gap-9 text-gray-300 size text-xl tracking-tightest">
+                <ul class="flex gap-9 text-gray-300 size text-xl tracking-tightest h-full leading-[56px]">
                     <li class=" text-orange-200 font-DanaMedium">
                         <a href="#">صفحه اصلی</a>
                     </li>
-                    <li>
-                        <a href="#">فروشگاه</a>
+                    <li class="relative group">
+                        <a href="#" class="group-hover:text-orange-300">فروشگاه</a>
                         <!-- sub menu -->
-                         <ul class="hidden">
+                         <ul class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all absolute w-52  py-7 px-6 tracking-normal top-full text-base bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white space-y-4 rounded-2xl
+                         border-t-[3px] border-t-orange-300 child-hover:text-orange-300 chitransition-colors shadow-custom ">
                             <li>
                                 <a href="#">قهوه ویژه</a>
                             </li>
