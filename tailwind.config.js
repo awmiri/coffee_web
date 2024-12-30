@@ -31,6 +31,11 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant('hover', '& > *');
+      addVariant('child-hover', '& > *:hover')
+    }
+  ],
 }
 
