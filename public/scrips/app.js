@@ -2,13 +2,18 @@
 let $ = document
 // select elements
 const moonIcon = $.querySelector('#moon_icon');
-const getRoot = $.querySelector('html');
+// 
+if (window.localStorage.getItem('them') === 'dark') {
+    $.documentElement.classList.add('dark')
+}
 // dark mood event
 moonIcon.addEventListener('click', function () {
-    if (getRoot.hasAttribute('class')) {
-        getRoot.removeAttribute('class')
+    if ($.documentElement.classList.contains('dark')) {
+        $.documentElement.classList.remove('dark')
+        window.localStorage.setItem('them', 'light')
     } else {
-        getRoot.setAttribute('class', 'dark')
+        $.documentElement.classList.add('dark')
+        window.localStorage.setItem('them', 'dark')
     }
 })
 
