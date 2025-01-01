@@ -28,11 +28,15 @@ module.exports = {
       },
       letterSpacing: {
         "tightest": "-.065em"
+      },
+      spacing: {
+        '30': '7.5rem',
       }
     },
   },
   plugins: [
     function ({ addVariant }) {
+      addVariant('child', '& > *');
       addVariant('hover', '& > *');
       addVariant('child-hover', '& > *:hover')
     }

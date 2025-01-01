@@ -2,7 +2,9 @@
 let $ = document
 // select elements
 const moonIcon = $.querySelector('#moon_icon');
-// 
+const shopeIcon = $.querySelector('#shope_card');
+const getShopeArea = $.querySelector('#shop_area');
+// local storage for dark mood event
 if (window.localStorage.getItem('them') === 'dark') {
     $.documentElement.classList.add('dark')
 }
@@ -16,4 +18,17 @@ moonIcon.addEventListener('click', function () {
         window.localStorage.setItem('them', 'dark')
     }
 })
-
+// show shop area
+shopeIcon.addEventListener('click', function (event) {
+    if (getShopeArea.classList.contains('invisible') && getShopeArea.classList.contains('opacity-0')) {
+        getShopeArea.classList.add("visible")
+        getShopeArea.classList.add("opacity-100")
+        getShopeArea.classList.remove('invisible')
+        getShopeArea.classList.remove('opacity-0')
+    } else {
+        getShopeArea.classList.remove("visible")
+        getShopeArea.classList.remove("opacity-100")
+        getShopeArea.classList.add('invisible')
+        getShopeArea.classList.add('opacity-0')
+    }
+})
