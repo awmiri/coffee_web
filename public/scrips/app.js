@@ -2,6 +2,8 @@
 let $ = document
 // select elements
 const moonIcon = $.querySelector('#moon_icon');
+const moonIconMobile = $.querySelector('#moon_icon_mobile');
+const getThemContent = $.querySelector('.them_content');
 const shopeIcon = $.querySelector('#shope_card');
 const getShopeArea = $.querySelector('#shop_area');
 // local storage for dark mood event
@@ -15,6 +17,18 @@ moonIcon.addEventListener('click', function () {
         window.localStorage.setItem('them', 'light')
     } else {
         $.documentElement.classList.add('dark')
+        window.localStorage.setItem('them', 'dark')
+    }
+})
+// dark mood event on mobile
+moonIconMobile.addEventListener('click', function () {
+    if ($.documentElement.classList.contains('dark')) {
+        $.documentElement.classList.remove('dark')
+        getThemContent.innerHTML = 'تم تاریک'
+        window.localStorage.setItem('them', 'light')
+    } else {
+        $.documentElement.classList.add('dark')
+        getThemContent.innerHTML = 'تم روشن'
         window.localStorage.setItem('them', 'dark')
     }
 })
