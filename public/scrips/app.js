@@ -1,8 +1,7 @@
 // change document value 
 let $ = document
 // select elements
-const moonIcon = $.querySelector('#moon_icon');
-const moonIconMobile = $.querySelector('#moon_icon_mobile');
+const moonIcons = $.querySelectorAll('.moon_icon');
 const getThemContent = $.querySelector('.them_content');
 const shopeIcon = $.querySelector('#shope_card');
 const getShopeArea = $.querySelector('#shop_area');
@@ -11,26 +10,18 @@ if (window.localStorage.getItem('them') === 'dark') {
     $.documentElement.classList.add('dark')
 }
 // dark mood event
-moonIcon.addEventListener('click', function () {
-    if ($.documentElement.classList.contains('dark')) {
-        $.documentElement.classList.remove('dark')
-        window.localStorage.setItem('them', 'light')
-    } else {
-        $.documentElement.classList.add('dark')
-        window.localStorage.setItem('them', 'dark')
-    }
-})
-// dark mood event on mobile
-moonIconMobile.addEventListener('click', function () {
-    if ($.documentElement.classList.contains('dark')) {
-        $.documentElement.classList.remove('dark')
-        getThemContent.innerHTML = 'تم تاریک'
-        window.localStorage.setItem('them', 'light')
-    } else {
-        $.documentElement.classList.add('dark')
-        getThemContent.innerHTML = 'تم روشن'
-        window.localStorage.setItem('them', 'dark')
-    }
+moonIcons.forEach(function (item) {
+    item.addEventListener('click', function () {
+        if ($.documentElement.classList.contains('dark')) {
+            $.documentElement.classList.remove('dark')
+            getThemContent.innerHTML = 'تم تاریک'
+            window.localStorage.setItem('them', 'light')
+        } else {
+            $.documentElement.classList.add('dark')
+            getThemContent.innerHTML = 'تم روشن'
+            window.localStorage.setItem('them', 'dark')
+        }
+    })
 })
 // show shop area
 shopeIcon.addEventListener('click', function (event) {

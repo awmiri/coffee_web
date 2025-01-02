@@ -38,3 +38,23 @@
     background-repeat: no-repeat;
   }
 }
+
+@layer components {
+  .submenu_active {
+    color: #fdba74;
+    position: relative;
+    padding-right: 10px;
+  }
+  .submenu_active::after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    background-color: #fdba74;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto 0;
+    border-radius: 100%;
+  }
+}
