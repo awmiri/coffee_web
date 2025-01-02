@@ -138,7 +138,7 @@
                         </svg>
                     </div>
                     <!-- shop area group-hover:visible -->
-                        <div id="shop_area" class="  invisible opacity-0  group-hover:opacity-100 transition-all absolute w-[400px] max-h-[485px] overflow-y-scroll p-5 top-full left-0 bg-white dark:bg-zinc-700 rounded-2xl border-t-[3px] border-t-orange-300 shadow-custom ">
+                        <div id="shop_area" class="  invisible opacity-0  group-hover:opacity-100 transition-all absolute w-[400px] max-h-[485px] overflow-y-auto p-5 top-full left-0 bg-white dark:bg-zinc-700 rounded-2xl border-t-[3px] border-t-orange-300 shadow-custom ">
                             <!-- header of shop -->
                              <div class="flex items-center justify-between"> 
                                 <span class="text-gray-300 font-DanaMedium tracking-tighter text-xs" >1 مورد</span>
@@ -218,13 +218,13 @@
     <!-- mobile header -->
      <div class="bg-white dark:bg-zinc-700 h-16 px-4 flex items-center justify-between md:hidden ">
         <!-- nav logo -->
-        <div>
+        <div class="nav_btn--open">
             <svg class="w-7 h-7 text-zinc-700 dark:text-white">
                 <use href="#bars-3"></use>
             </svg>
         </div>
         <!-- nav menu -->
-        <div class="fixed top-0 bottom-0 right-0 w-64 h-screen bg-white dark:bg-zinc-700 z-20 py-3 px-4 ">
+        <div class="nav fixed top-0 bottom-0 -right-64 w-64 h-screen bg-white dark:bg-zinc-700 z-20 py-3 px-4 transition-all overflow-y-auto">
              <!-- nav menu logo and close icon -->
             <div class="flex items-center justify-between border-b-[1px] border-b-gray-100 dark:border-b-white/10 mb-6 pb-5">
                 <div class=" flex gap-3.5">
@@ -235,12 +235,14 @@
                         <use href="#logo_type"></use>
                     </svg>
                 </div>
-                <svg class="w-5 h-5 text-zinc-700 dark:text-white">
-                    <use href="#x-mark"></use>
-                </svg>
+                <div class="close_nav">
+                    <svg class="w-5 h-5 text-zinc-700 dark:text-white">
+                        <use href="#x-mark"></use>
+                    </svg>
+                </div>
             </div>
             <!-- nav menu link content -->
-             <div>
+             <div class="">
                 <div class="bg-orange-200/20 text-zinc-600 dark:text-white mb-4 w-[100%] h-10 flex items-center rounded-md transition-all pr-2.5">
                     <a href="#" class="flex gap-x-2 items-center w-full">
                         <svg class="w-5 h-5"> 
@@ -251,19 +253,19 @@
                 <ul class="text-zinc-600 dark:text-white child:pr-2.5 space-y-4">
                     <!-- submenu container -->
                     <li class="">
-                        <div class="flex items-center justify-between">
+                        <div class="flex items-center justify-between transition-all">
                             <a href="#" class="flex gap-x-2 items-center">
                                 <svg class="w-5 h-5"> 
                                 <use href="#shop_bag"></use>
                             </svg>فروشگاه</a>
-                            <span class="submenu_btn">
+                            <span class="submenu_btn transition-all">
                                 <svg class="w-4 h-4"> 
                                 <use href="#arrow-down"></use>
                             </svg>
                             </span>
                         </div>
                         <!-- submenu -->
-                        <div class="flex flex-col text-zinc-500 dark:text-white text-sm pr-7 gap-y-3 mt-3">
+                        <div class="submenu_close transition-all">
                             <a href="#" >قهوه ویژه</a>
                             <a href="#" class="submenu_active">ویژه در سطح جهانی</a>
                             <a href="#">قهوه درجه یک</a>
@@ -344,7 +346,7 @@
      </div>
 
 
-     <dir class="bg-black/40 inset-0 m-0 w-screen h-screen fixed md:hidden z-10"></dir>
+     <dir class="overlay_close transition-all"></dir>
     <script src="./scrips/app.js"></script>
 </body>
 </html>

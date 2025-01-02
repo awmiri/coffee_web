@@ -57,4 +57,16 @@
     margin: auto 0;
     border-radius: 100%;
   }
+  .submenu_close {
+    @apply invisible opacity-0 h-0;
+  }
+  .submenu_open {
+    @apply flex flex-col opacity-100 h-full visible  text-zinc-500 dark:text-white text-sm pr-7 gap-y-3 mt-3;
+  }
+  .overlay_close {
+    @apply bg-black/40 inset-0 m-0 w-screen h-screen fixed md:hidden z-10 invisible opacity-0;
+  }
+  .overlay {
+    @apply bg-black/40 inset-0 m-0 w-screen h-screen fixed md:hidden z-10 visible opacity-100;
+  }
 }
