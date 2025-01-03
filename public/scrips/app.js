@@ -15,6 +15,23 @@ const shoppingCard = $.querySelector('.shopping_card');  // shopping icon in mob
 const shoppingNav = $.querySelector('.shopping');  // shopping area in mobile
 const closeShoppingBtn = $.querySelector('.close_shopping-btn');  // close icon in shopping 
 const shoppingCardInNavMenu = $.querySelector('#nav_shopping_card');  // shopping icon when you open burger menu
+// widely use function
+function overlayAdd() {
+    overlay.classList.remove('overlay_close')
+    overlay.classList.add('overlay')
+}// for open dark bg when something open
+function overlayRemove() {
+    overlay.classList.add('overlay_close')
+    overlay.classList.remove('overlay')
+}// for close dark bg when something close
+function navRemove() {
+    getNavMenu.classList.add('-right-64')
+    getNavMenu.classList.remove('right-0')
+}// for close navigation menu
+function navAdd() {
+    getNavMenu.classList.remove('-right-64')
+    getNavMenu.classList.add('right-0')
+} // for open navigation menu
 // local storage for dark mood event
 if (window.localStorage.getItem('them') === 'dark') {
     $.documentElement.classList.add('dark')
@@ -86,20 +103,3 @@ overlay.addEventListener('click', closeShoppingNav)
 closeShoppingBtn.addEventListener('click', closeShoppingNav)
 shoppingCard.addEventListener('click', openShoppingNav)
 shoppingCardInNavMenu.addEventListener('click', openShoppingInNav)
-// widely use function
-function overlayAdd() {
-    overlay.classList.remove('overlay_close')
-    overlay.classList.add('overlay')
-}// for open dark bg when something open
-function overlayRemove() {
-    overlay.classList.add('overlay_close')
-    overlay.classList.remove('overlay')
-}// for close dark bg when something close
-function navRemove() {
-    getNavMenu.classList.add('-right-64')
-    getNavMenu.classList.remove('right-0')
-}// for close navigation menu
-function navAdd() {
-    getNavMenu.classList.remove('-right-64')
-    getNavMenu.classList.add('right-0')
-} // for open navigation menu
