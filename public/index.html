@@ -225,7 +225,7 @@
         </div>
         <!-- nav menu -->
         <div class="nav fixed top-0 bottom-0 -right-64 w-64 h-screen bg-white dark:bg-zinc-700 z-20 py-3 px-4 transition-all overflow-y-auto">
-             <!-- nav menu logo and close icon -->
+             <!-- nav menu logo and close icon (header) -->
             <div class="flex items-center justify-between border-b-[1px] border-b-gray-100 dark:border-b-white/10 mb-6 pb-5">
                 <div class=" flex gap-3.5">
                     <svg class="w-[41px] h-10 text-orange-300">
@@ -241,7 +241,7 @@
                     </svg>
                 </div>
             </div>
-            <!-- nav menu link content -->
+            <!-- nav menu link content (body) -->
              <div class="">
                 <div class="bg-orange-200/20 text-zinc-600 dark:text-white mb-4 w-[100%] h-10 flex items-center rounded-md transition-all pr-2.5">
                     <a href="#" class="flex gap-x-2 items-center w-full">
@@ -304,7 +304,7 @@
                     </li>
                 </ul>
              </div>
-            <!-- link and bottom also change theme btn -->
+            <!-- link and bottom also change theme btn (footer) -->
             <div class="border-t-[1px] border-t-gray-100 dark:border-t-white/10 mt-6 pt-5 text-orange-300 ">
                 <div class=" space-y-6 inline-flex flex-col">
                     <a href="#" class=" inline-flex items-center gap-x-2.5 ">
@@ -322,7 +322,7 @@
                         </svg>
                         <span class="them_content">تم روشن</span>
                     </div>
-                    <a href="#" class=" inline-flex items-center gap-x-2.5 ">
+                    <a href="#" id="nav_shopping_card" class=" inline-flex items-center gap-x-2.5 ">
                         <svg class="w-5 h-5"> 
                             <use href="#shop_card"></use>
                         </svg>
@@ -338,24 +338,53 @@
             </svg>
         </div>
         <!-- shop card -->
-        <div>
+        <div class="shopping_card">
             <svg class="w-6 h-6 text-zinc-700 dark:text-white">
                 <use href="#shop_card"></use>
             </svg>
         </div>
         <!-- shopping nav -->
-        <div class="nav fixed top-0 bottom-0 left-0 w-64 h-screen bg-white dark:bg-zinc-700 z-20 py-3 px-4 transition-all overflow-y-auto">
+        <div class="shopping fixed flex flex-col top-0 bottom-0 -left-64 w-64 h-screen bg-white dark:bg-zinc-700 z-20 py-3 px-4 transition-all overflow-y-auto">
             <!-- shopping nav header -->
-           <div class="flex items-center justify-between border-b-[1px] border-b-gray-100 dark:border-b-white/10 mb-5 pb-5">
-               <div class="close_nav">
+           <div class="flex items-center justify-between border-b-[1px] border-b-gray-200 dark:border-b-white/10 mb-5 pb-5">
+               <div class="close_shopping-btn">
                    <svg class="w-5 h-5 text-zinc-700 dark:text-white">
                        <use href="#x-mark"></use>
                    </svg>
                </div>
                <span class="text-zinc-700 dark:text-white">سبد خرید</span>
            </div>
+           <!-- shopping nav body -->
+           <div class="text-zinc-700 dark:text-white transition-all child:border-b-[1px] child:pb-5 child:mb-5 child:border-b-gray-100 child:dark:border-b-white/10 overflow-y-auto ">
+            <div class="flex gap-x-1 ">
+                <img src="./image/products/p2.png" alt="product one" class="w-22.5 h-22.5">
+            <div class=" ">
+                <h4 class="font-DanaMedium text-sm tracking-normal mb-1.5 line-clamp-2">قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی</h4>
+                <div class="">
+                    <span class="text-teal-600 dark:text-emerald-500 font-DanaMedium text-xs tracking-tight">14.500 تومان تخفیف</span>
+                    <div class="font-DanaDemiBold text-xl">
+                        175,000 
+                        <span class="font-Dana text-sm">تومان</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="flex gap-x-1">
+                <img src="./image/products/p1.png" alt="product one" class="w-22.5 h-22.5">
+            <div class=" ">
+                <h4 class="font-DanaMedium text-sm tracking-normal mb-1.5 line-clamp-2">قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی</h4>
+                <div class="">
+                    <span class="text-teal-600 dark:text-emerald-500 font-DanaMedium text-xs tracking-tight">14.500 تومان تخفیف</span>
+                    <div class="font-DanaDemiBold text-xl">
+                        175,000 
+                        <span class="font-Dana text-sm">تومان</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
            <!-- shopping nav footer -->
-           <div class=" flex items-center gap-x-2.5">
+           <div class=" flex items-center gap-x-2.5 mt-auto mb-5">
             <a href="#" class="w-28 h-11 bg-teal-600 dark:bg-emerald-500 rounded-xl flex items-center justify-center text-white">ثبت سفارش</a>
             <div> 
                 <span class="text-gray-300 text-xs font-DanaMedium tracking-tight">
