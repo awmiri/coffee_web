@@ -80,4 +80,22 @@
   .circle_sm {
     @apply w-[95px] h-[95px] border-white/80;
   }
+  .products{
+    background: transparent;
+  }
+  @media only screen and (min-width:1280px) {
+    html.dark .products {
+      background-image: url("../image/product.png");
+    }
+    .products {
+      background: linear-gradient(
+          rgba(243, 244, 246, 0.7),
+          rgba(243, 244, 246, 0.7)
+        ),
+        url("../image/product.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 900px;
+    }
+  }
 }
