@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="./image/fav-icon.png" type="image/x-icon">
     <title>coffee web</title>
 </head>
-<body class="font-Dana bg-gray-100 dark:bg-zinc-800">
+<body class="font-Dana bg-gray-100 dark:bg-zinc-800 h-[2000px]">
     <svg class="hidden">
         <symbol id="shop_card" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
@@ -72,11 +72,15 @@
         </symbol>   
         <symbol id="phone" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 3.75v4.5m0-4.5h-4.5m4.5 0-6 6m3 12c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
-        </symbol>                 
+        </symbol>      
+        <symbol id="curve" viewBox="0 0 100 22" fill="currentColor">
+            <path d="M50 0C69 0 81 22 100 22L0 22C18.75 22 31 0 50 0Z"/>
+        </symbol>
+                       
     </svg>
     <!-------------------------------------header side----------------->
     <!-- desktop header -->
-    <header class=" hidden fixed top-14 right-0 left-0 md:flex items-center w-[98%] lg:w-[90%] h-24 bg-black/50 backdrop-blur-[6px] mx-auto py-5 px-6 lg:px-10 rounded-3xl">
+    <header class=" hidden fixed top-14 right-0 left-0 md:flex items-center w-[98%] lg:w-[90%] h-24 bg-black/50 backdrop-blur-[6px] mx-auto py-5 px-6 lg:px-10 rounded-3xl z-50">
         <div class="flex  w-full justify-between ">
              <!-- title & logo -->
              <nav class="flex items-center gap-4 lg:gap-7 xl:gap-9 h-14">
@@ -401,17 +405,38 @@
      </div>
      <!----------------------------------main side---------------------->
      <main>
-        <section class="home">
-            <div class="container flex items-center justify-end md:min-h-screen">
+        <section class="home bg-background_mobile bg-no-repeat bg-cover md:bg-[center_top] h-[200px] xs:aspect-[2/1] xs:h-auto md:bg-background_desktop md:aspect-auto relative">
+            <!-- home container -->
+            <div class="container h-full relative flex items-center justify-end md:min-h-screen overflow-y-hidden ">
+                <!-- home text -->
                 <div class=" text-white ">
-                    <h2 class=" font-MorabbaBold text-2xl md:text-6xl mb-[2px] md:mb-2">
+                    <!-- home header -->
+                    <h2 class=" font-MorabbaBold text-2xl md:text-6xl/[60px] mb-[2px] md:mb-2">
                         قهوه عربیکا تانزانیا
                     </h2>
-                    <h3 class="block font-MorabbaLight text-xl md:text-5xl mb-3 md:mb-8">یک فنجان بالانس !</h3>
+                    <!-- home text -->
+                    <h3 class="block font-MorabbaLight text-xl/[32px] md:text-5xl/[64px] mb-3 md:mb-8">یک فنجان بالانس !</h3>
                     <span class=" block w-[100px] h-px bg-orange-300 md:h-[2px] mb-3 md:mb-8"></span>
                     <p class="text-xs max-w-[201px] md:max-w-[460px] md:text-2xl">قطعا نام آشنای عربیکا را شنیده اید، عربیکا یکی از گونه های قهوه است که در نواحی مختلف کمربند قهوه کشت میشود.</p>
                 </div>
+                <!-- circles -->
+              <div class="circle circle_lg circle_main">
+                <div class="circle circle_md">
+                    <div class="circle circle_sm"></div>
+                </div>
+              </div>
             </div>
+            <!-- curve icon place -->
+             <svg class="hidden md:flex text-gray-100 dark:text-zinc-800 w-[100px] h-[22px] absolute bottom-0 left-0 right-0 mx-auto">
+                <use href="#curve"></use>
+             </svg>
+            <!-- curve icon place -->
+             <div class="w-[30px] h-[30px] border-2 border-orange-300 rounded-full hidden md:flex items-center justify-center absolute bottom-0 left-0 right-0 mx-auto translate-y-1/2">
+                <svg class="w-5 h-5 text-zinc-800 dark:text-white">
+                    <use href="#arrow-down"></use>
+                </svg>
+             </div>             
+             
         </section>
      </main>
 

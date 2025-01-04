@@ -65,4 +65,19 @@
   .overlay {
     @apply bg-black/40 inset-0 m-0 w-screen h-screen fixed md:hidden z-10 visible opacity-100;
   }
+  .circle {
+    @apply rounded-full border flex items-center justify-center;
+  }
+  .circle_lg {
+    @apply w-[203px] h-[203px] border-white/25;
+  }
+  .circle_main {
+    @apply hidden md:flex items-center justify-center absolute bottom-0 left-0 right-0 mx-auto translate-y-1/2;
+  }
+  .circle_md {
+    @apply w-[145px] h-[145px] border-white/50;
+  }
+  .circle_sm {
+    @apply w-[95px] h-[95px] border-white/80;
+  }
 }
