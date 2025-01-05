@@ -83,6 +83,15 @@
   .products{
     background: transparent;
   }
+  .products_title{
+    @apply font-MorabbaMedium text-2xl lg:text-5xl;
+  }
+  .products_subtitle{
+    @apply  font-MorabbaLight text-lg lg:text-3xl/[48px] mt-0.5 md:mt-1.5; 
+  }
+  .products_link{
+    @apply  text-orange-300 text-xl h-10 rounded-md pr-3 pl-1 flex items-center justify-end gap-1 tracking-tightest md:hover:bg-orange-300/20 transition-colors;
+  }
   @media only screen and (min-width:1280px) {
     html.dark .products {
       background-image: url("../image/product.png");
@@ -95,7 +104,20 @@
         url("../image/product.png");
       background-repeat: no-repeat;
       background-size: 100%;
-      height: 900px;
     }
+    
+  }
+  .price{
+    @apply text-gray-400 relative;
+  }
+  .price::after{
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background: #ef4444;
+    position: absolute;
+    inset: 0;
+    top: -1px;
+    margin: auto;
   }
 }
