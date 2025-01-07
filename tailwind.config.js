@@ -31,7 +31,9 @@ module.exports = {
       },
       spacing: {
         '30': '7.5rem',
-        '22.5': '5.625rem'
+        '22.5': '5.625rem',
+        '25': '6.25',
+        '50': '12.5'
       },
       container: {
         center: true,
