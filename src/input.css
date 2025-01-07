@@ -139,4 +139,8 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .swiper-button-prev_custom,
+  .swiper-button-next_custom {
+    @apply bg-white dark:bg-zinc-700 w-9 h-9 md:w-11 md:h-11 rounded-full flex items-center justify-center md:hover:bg-gray-300 md:hover:text-zinc-700 md:hover:dark:bg-white md:hover:dark:text-zinc-700 text-zinc-700 dark:text-white md:cursor-pointer transition-all;
+  }
 }
