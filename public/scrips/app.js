@@ -15,7 +15,6 @@ const shoppingCard = $.querySelector('.shopping_card');  // shopping icon in mob
 const shoppingNav = $.querySelector('.shopping');  // shopping area in mobile
 const closeShoppingBtn = $.querySelector('.close_shopping-btn');  // close icon in shopping 
 const shoppingCardInNavMenu = $.querySelector('#nav_shopping_card');  // shopping icon when you open burger menu
-const selectStar = $.querySelectorAll('.star')
 // widely use function
 function overlayAdd() {
     overlay.classList.remove('overlay_close')
@@ -105,3 +104,25 @@ closeShoppingBtn.addEventListener('click', closeShoppingNav)
 shoppingCard.addEventListener('click', openShoppingNav)
 shoppingCardInNavMenu.addEventListener('click', openShoppingInNav)
 
+$.addEventListener('DOMContentLoaded', function () {
+    const getAllUl = $.querySelectorAll('.rating-container')
+    getAllUl.forEach(function (star) {
+        const selectStar = star.querySelectorAll('.star')
+        selectStar.forEach(function (star) {
+            star.addEventListener('click', function () {
+                const value = star.getAttribute('data-id')
+                selectStar.forEach(function (s) {
+                    s.classList.remove('text-yellow-400', 'dark:text-yellow-500')
+                    s.classList.add('text-gray-300', 'dark:text-gray-400')
+                })
+                selectStar.forEach(function (s) {
+                    if (s.getAttribute('data-id') <= value) {
+                        s.classList.remove('text-gray-300', 'dark:text-gray-400')
+                        s.classList.add('text-yellow-400', 'dark:text-yellow-500')
+                    }
+                })
+            })
+        })
+
+    })
+})
