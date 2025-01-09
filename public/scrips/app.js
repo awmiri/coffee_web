@@ -103,17 +103,17 @@ overlay.addEventListener('click', closeShoppingNav)
 closeShoppingBtn.addEventListener('click', closeShoppingNav)
 shoppingCard.addEventListener('click', openShoppingNav)
 shoppingCardInNavMenu.addEventListener('click', openShoppingInNav)
-
+// add event for dom
 $.addEventListener('DOMContentLoaded', function () {
-    const getAllUl = $.querySelectorAll('.rating-container')
-    getAllUl.forEach(function (star) {
-        const selectStar = star.querySelectorAll('.star')
+    const getAllContainer = $.querySelectorAll('.rating-container')  // get all stars container
+    getAllContainer.forEach(function (star) {
+        const selectStar = star.querySelectorAll('.star')  // get all star
         selectStar.forEach(function (star) {
             star.addEventListener('click', function () {
-                const value = star.getAttribute('data-id')
+                const value = star.getAttribute('data-id')  // get stars value
                 selectStar.forEach(function (s) {
-                    s.classList.remove('text-yellow-400', 'dark:text-yellow-500')
-                    s.classList.add('text-gray-300', 'dark:text-gray-400')
+                    s.classList.remove('text-yellow-400', 'dark:text-yellow-500')  // stars remove color class list
+                    s.classList.add('text-gray-300', 'dark:text-gray-400')  // stars add color class list
                 })
                 selectStar.forEach(function (s) {
                     if (s.getAttribute('data-id') <= value) {
