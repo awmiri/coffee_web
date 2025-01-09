@@ -15,6 +15,7 @@ const shoppingCard = $.querySelector('.shopping_card');  // shopping icon in mob
 const shoppingNav = $.querySelector('.shopping');  // shopping area in mobile
 const closeShoppingBtn = $.querySelector('.close_shopping-btn');  // close icon in shopping 
 const shoppingCardInNavMenu = $.querySelector('#nav_shopping_card');  // shopping icon when you open burger menu
+const selectStar = $.querySelectorAll('.star')
 // widely use function
 function overlayAdd() {
     overlay.classList.remove('overlay_close')
@@ -103,3 +104,4 @@ overlay.addEventListener('click', closeShoppingNav)
 closeShoppingBtn.addEventListener('click', closeShoppingNav)
 shoppingCard.addEventListener('click', openShoppingNav)
 shoppingCardInNavMenu.addEventListener('click', openShoppingInNav)
+
