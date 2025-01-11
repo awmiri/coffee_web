@@ -101,6 +101,10 @@
         <symbol id="ticket" viewBox="0 0 40 36" fill="none">
             <path d="M31.712 0C36.28 0 39.998 3.68403 39.998 8.21028L40 13.5649C40 13.9573 39.842 14.3378 39.562 14.6152C39.28 14.8946 38.9 15.0512 38.5 15.0512C36.858 15.0512 35.522 16.375 35.522 18.002C35.522 19.629 36.858 20.9528 38.5 20.9528C39.328 20.9528 40 21.6186 40 22.4391V27.7917C40 32.318 36.284 36 31.716 36H8.286C3.718 36 0 32.318 0 27.7917V22.4391C0 21.6186 0.672 20.9528 1.5 20.9528C3.144 20.9528 4.48 19.629 4.48 18.002C4.48 16.4166 3.198 15.2236 1.5 15.2236C1.102 15.2236 0.722 15.067 0.44 14.7876C0.158 14.5082 0 14.1297 0 13.7373L0.004 8.21028C0.004 3.68403 3.72 0 8.288 0H31.712ZM20.004 10.3069C19.436 10.3069 18.928 10.6201 18.674 11.1234L17.216 14.0504L13.964 14.5201C13.402 14.5994 12.942 14.9799 12.764 15.5149C12.588 16.05 12.73 16.6286 13.138 17.021L15.496 19.296L14.94 22.5124C14.844 23.0673 15.07 23.6182 15.53 23.9491C15.79 24.1334 16.092 24.2286 16.398 24.2286C16.632 24.2286 16.868 24.1711 17.084 24.0581L20 22.5401L22.91 24.0542C23.414 24.3217 24.012 24.2801 24.47 23.9472C24.932 23.6182 25.158 23.0673 25.062 22.5124L24.504 19.296L26.862 17.021C27.272 16.6286 27.414 16.05 27.236 15.5149C27.06 14.9799 26.6 14.5994 26.044 14.5221L22.786 14.0504L21.328 11.1254C21.078 10.622 20.57 10.3089 20.004 10.3069Z" fill="#059669"/>
         </symbol>
+        <symbol id="croose-arrow" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M18 10a.75.75 0 0 1-.75.75H4.66l2.1 1.95a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 1 1 1.02 1.1l-2.1 1.95h12.59A.75.75 0 0 1 18 10Z" clip-rule="evenodd" />
+        </symbol>
+          
             
                   
           
@@ -1485,28 +1489,49 @@
                     </a>
                 </div>
                 <!-- weblog section content -->
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 lg:gap-5">
-                    <div class="bg-white dark:bg-zinc-700 shadow-custom rounded-2xl w-[300px] p-2.5 md:pb-2 group">
-                        <div class="relative overflow-y-hidden rounded-2xl rounded-bl-3xl">
-                            <img src="./image/blogs/blog-1.png" alt="" class="w-[280px]">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5 lg:gap-5">
+                    <!-- weblog first content -->
+                    <div class="bg-white dark:bg-zinc-700 shadow-custom rounded-2xl sm:w-[300px] p-2.5 md:pb-2 group flex sm:block gap-2.5">
+                        <!-- weblog image and hover image side -->
+                        <div class="relative overflow-y-hidden rounded-2xl rounded-bl-3xl w-[130px] h-[130px] sm:w-auto sm:h-auto flex-shrink-0">
+                            <img src="./image/blogs/blog-1.png" alt="" class="w-[130px] h-full object-cover sm:w-[280px] sm:h-auto bg-cover">
                             <div class="absolute inset-0 h-full w-full bg-gradient-to-r from-orange-200/70 to-orange-300/70 hidden invisible opacity-0 group-hover:visible group-hover:opacity-100 md:flex md:items-center md:justify-center transition-all">
                                 <svg class="text-amber-900 w-[138px] h-[54px] flex items-center justify-center">
                                     <use href="#logo_type"></use>
                                 </svg>
                             </div>
+                            <!-- weblog text content -->
                         </div>
-                        <div class="flex justify-between mt-4 ">
-                            <h5 class="max-w-[193px] relative text-zinc-700 dark:text-white text-lg line-clamp-2">طرز تهیه قهوه دمی با دستگاه اروپرس</h5>
-                            <div class="flex pl-[18px]">
+                        <div class="flex flex-col sm:flex-row justify-between mt-2.5 mb-2.5 sm:mb-0 sm:mt-4 w-full sm:w-full">
+                            <!-- weblog text content title -->
+                            <a href="#" class="inline-block  max-w-[193px] relative text-zinc-700 dark:text-white font-DanaMedium sm:font-Dana text-sm/7 sm:text-lg line-clamp-2 mb-[18px] sm:mb-0">طرز تهیه قهوه دمی با دستگاه اروپرس</a>
+                            <div class="hidden sm:flex sm:pl-[18px]">
                                 <span class="w-px h-[61px] bg-gray-100 dark:bg-white/10 block"></span>
-                                <div class="text-teal-600 dark:text-emerald-500 flex flex-col pr-5">
+                                <div class="text-teal-600 dark:text-emerald-500 flex flex-col items-end pr-5">
                                     <span class="font-DanaDemiBold text-2xl/[34px]">21</span>
                                     <span class="text-sm">مرداد</span>
                                     <span class="text-sm">1402</span>
                                 </div>
                             </div>
+                            <div class="sm:hidden block w-[100%]">
+                                <span class="h-px max-w-full bg-gray-100 dark:bg-white/10 block"></span>
+                                <div class="flex justify-between items-center pl-2 mt-[18px]">
+                                    <span class="text-teal-600 dark:text-emerald-500">21 مرداد 1402</span>
+                                    <a href="#" class="flex items-center justify-center gap-1 w-[71px] h-[22px] bg-orange-200/20 text-orange-300 text-xs rounded-md -mt-[2px]">
+                                        مطالعه
+                                        <svg class="w-[14px] h-[14px]">
+                                            <use href="#croose-arrow"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- weblog second content -->
+                    
+                    <!-- weblog third content -->
+                    
+                    <!-- weblog fourth content -->
                     
                 </div>
             </div>
