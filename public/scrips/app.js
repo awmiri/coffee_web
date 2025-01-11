@@ -103,7 +103,7 @@ overlay.addEventListener('click', closeShoppingNav)
 closeShoppingBtn.addEventListener('click', closeShoppingNav)
 shoppingCard.addEventListener('click', openShoppingNav)
 shoppingCardInNavMenu.addEventListener('click', openShoppingInNav)
-// add event for dom
+// add event for dom in order to create star rating
 $.addEventListener('DOMContentLoaded', function () {
     const getAllContainer = $.querySelectorAll('.rating-container')  // get all stars container
     getAllContainer.forEach(function (star) {
