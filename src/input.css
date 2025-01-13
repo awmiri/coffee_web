@@ -143,4 +143,34 @@
   .swiper-button-next_custom {
     @apply bg-white dark:bg-zinc-700 w-9 h-9 md:w-11 md:h-11 rounded-full flex items-center justify-center md:hover:bg-gray-300 md:hover:text-zinc-700 md:hover:dark:bg-white md:hover:dark:text-zinc-700 text-zinc-700 dark:text-white md:cursor-pointer transition-all;
   }
+  .services_line::after,
+  .services_line::before {
+    content: " ";
+    background-color: #d1d5db;
+    position: absolute;
+  }
+  .services_line::after {
+    height: calc(100% + 20px);
+    width: 1.5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .services_line::before {
+    width: calc(100% - 2rem);
+    height: 1.5px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+  html.dark .services_line::before,
+  html.dark .services_line::after {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  @media only screen and (min-width: 768px) {
+    .services_line::after,
+    .services_line::before {
+      display: none;
+    }
+  }
 }
