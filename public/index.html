@@ -277,7 +277,7 @@
             </svg>
         </div>
         <!-- nav menu -->
-        <div class="nav fixed top-0 bottom-0 -right-64 w-64 h-screen bg-white dark:bg-zinc-700 z-20 py-3 px-4 transition-all overflow-y-auto">
+        <div class="nav fixed top-0 bottom-0 -right-64 w-64 bg-white dark:bg-zinc-700 z-20 py-3 px-4 transition-all overflow-y-auto">
              <!-- nav menu logo and close icon (header) -->
             <div class="flex items-center justify-between border-b-[1px] border-b-gray-100 dark:border-b-white/10 mb-6 pb-5">
                 <div class=" flex gap-3.5">
@@ -397,7 +397,7 @@
             </svg>
         </div>
         <!-- shopping nav -->
-        <div class="shopping fixed flex flex-col top-0 bottom-0 -left-64 w-64 h-screen bg-white dark:bg-zinc-700 z-20 py-3 px-4 transition-all overflow-y-auto">
+        <div class="shopping fixed flex flex-col top-0 bottom-0 -left-64 w-64 bg-white dark:bg-zinc-700 z-20 py-3 px-4 transition-all overflow-y-auto">
             <!-- shopping nav header -->
            <div class="flex items-center justify-between border-b-[1px] border-b-gray-200 dark:border-b-white/10 mb-5 pb-5">
                <div class="close_shopping-btn">
@@ -1847,8 +1847,10 @@
             </svg>
          </div>
           <!-- footer content wraper -->
-        <div class="w-[98%] lg:w-[90%] mx-auto flex justify-between flex-wrap text-gray-300">
-             <!-- footer first content -->
+        <div class="w-[98%] lg:w-[90%] mx-auto text-gray-300">
+            <!-- content wraper -->
+            <div class="flex justify-between flex-wrap">
+                 <!-- footer first content -->
             <div class="mt-[18px]">
                 <div class=" flex gap-3.5 mb-6 md:mb-[18px]">
                     <svg class="w-[57px] h-[54px]">
@@ -1858,7 +1860,7 @@
                         <use href="#logo_type"></use>
                     </svg>
                 </div>
-                <p class="text-lg md:text-xl/[48px] max-w-[606px]">ما برآنیم تا با پیشرو بودن در فرآیند تولید، نوع و کیفیت محصول، خدمات و توزیع، الگویی برای تولیدکنندگان ایرانی باشیم و به مرجع فرهنگ قهوه در ایران تبدیل شویم. می‌پنداریم که نظر مردم ایران و منطقه باید نسبت به کالای ایرانی بهبود یابد و در این راستا با اشتیاق می‌کوشیم.</p>
+                <p class="text-lg md:text-xl/[48px] xl:max-w-[606px]">ما برآنیم تا با پیشرو بودن در فرآیند تولید، نوع و کیفیت محصول، خدمات و توزیع، الگویی برای تولیدکنندگان ایرانی باشیم و به مرجع فرهنگ قهوه در ایران تبدیل شویم. می‌پنداریم که نظر مردم ایران و منطقه باید نسبت به کالای ایرانی بهبود یابد و در این راستا با اشتیاق می‌کوشیم.</p>
             </div>
             <!-- footer second content -->
              <div class="mt-[26px]">
@@ -1924,27 +1926,40 @@
                             <use href="#phone"></use>
                         </svg>
                         <span class="flex items-center gap-5">
-                            <a href="tel:+9802 123 6628">0902 123 6628</a>
-                            <a href="tel:021 - 6789012">021 - 6789012</a>
+                            <a href="tel:+9802 123 6628" class="ltf-right">0902 123 6628</a>
+                            <a href="tel:021 - 6789012" class="ltf-right">021 - 6789012</a>
                         </span>
                     </span>
                    </div>
+                   <!-- social media -->
                    <div class=" flex items-center flex-wrap gap-6">
-                    <a href="#" class="w-[176px] md:w-[248px] h-[48px] md:h-12 flex items-center justify-center gap-2.5 text-orange-200 border-[1px] border-orange-200 rounded-xl">
+                    <a href="#" class="w-[176px] md:w-[248px] h-[48px] md:h-12 flex items-center justify-center gap-2.5 text-orange-200 border-[1px] border-orange-200 rounded-xl ltf-right">
+                        <span>@golden_coffee</span>
                         <svg class="w-[38px] h-[38px]">
                         <use href="#instagram"></use>
-                        <span>golden_coffee@</span>
                     </svg>
                     </a>
-                    <a href="#" class="w-[176px] md:w-[248px] h-[48px] md:h-12 flex items-center justify-center gap-2.5 bg-gradient-to-r from-orange-200 to-orange-300 rounded-xl text-zinc-700">
+                    <a href="#" class="w-[176px] md:w-[248px] h-[48px] md:h-12 flex items-center justify-center gap-2.5 bg-gradient-to-r from-orange-200 to-orange-300 rounded-xl text-zinc-700 ltf-right">
+                        <span>@golden_coffee</span>
                         <svg class="w-[38px] h-[38px]">
                         <use href="#telegram"></use>
-                        <span>golden_coffee@</span>
                     </svg>
                     </a>
                    </div>
                 </div>
              </div>
+            </div>
+            <div class="flex items-center justify-between flex-wrap gap-y-4 border-t mt-10 md:mt-11 pt-10 md:pt-11 font-DanaMedium text-xs md:text-base">
+                <div class="flex items-center gap-x-2.5">
+                    <div class="flex items-center justify-center shrink-0 w-[30px] h-[30px] border-[1px] border-white/20 rounded-full">
+                        <div class="flex items-center justify-center w-5 h-5 border-[1px] border-white/20 rounded-full">
+                            <span class="w-2.5 h-2.5 bg-gradient-to-t from-orange-200 to-orange-300 block rounded-full"></span>
+                        </div>
+                    </div>
+                    <span>تمام حقوق این رابط کاربری متعلق به <span class="text-orange-200">سبزلرن</span> میباشد و دانشجوی این دوره اجازه استفاده آن را در مصارف شخصی و تجاری ندارد.</span>
+                </div>
+                <span class="ltf-right mr-auto">Copyright © 2023 Golden Coffee. All rights reserved.</span>
+            </div>
         </div>
       </footer>
 

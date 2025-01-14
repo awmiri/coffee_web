@@ -173,4 +173,9 @@
       display: none;
     }
   }
+
+  .ltf-right {
+    direction: ltr;
+    text-align: left;
+  }
 }
