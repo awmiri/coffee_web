@@ -11,6 +11,7 @@ const getNavMenu = $.querySelector('.nav');  // nav area
 const closeNavBtn = $.querySelector('.close_nav');  // close icon in nav menu
 const openNavBtn = $.querySelector('.nav_btn--open');  // burger icon
 const overlay = $.querySelector('.overlay_close');  // dark area when you open nav&shopping area
+const darkBg = $.querySelector('.dark_bg');  // dark area when you open nav&shopping area
 const shoppingCard = $.querySelector('.shopping_card');  // shopping icon in mobile mode
 const shoppingNav = $.querySelector('.shopping');  // shopping area in mobile
 const closeShoppingBtn = $.querySelector('.close_shopping-btn');  // close icon in shopping 
@@ -63,6 +64,7 @@ shopeIcon.addEventListener('click', function (event) {
         getShopeArea.classList.add('invisible')
         getShopeArea.classList.add('opacity-0')
     }
+
 })
 // navmenu open & close
 closeNavBtn.addEventListener('click', function () {
@@ -125,4 +127,14 @@ $.addEventListener('DOMContentLoaded', function () {
         })
 
     })
+})
+// add event for page load  
+$.body.classList.add('overflow-hidden')
+window.addEventListener('load', function () {
+    setTimeout(function () {
+        darkBg.classList.remove('dark_bg')
+        darkBg.classList.add('dark_bg_close')
+        $.body.classList.remove('overflow-hidden')
+
+    }, 3000)
 })

@@ -62,8 +62,14 @@
   .overlay_close {
     @apply bg-black/40 inset-0 m-0 w-screen h-screen fixed md:hidden z-10 invisible opacity-0;
   }
+  .dark_bg_close {
+    @apply bg-black/40 inset-0 m-0 w-screen h-screen fixed z-10 invisible opacity-0;
+  }
   .overlay {
-    @apply bg-black/40 inset-0 m-0 w-screen h-screen fixed md:hidden z-10 visible opacity-100;
+    @apply bg-black/40 inset-0 m-0 w-screen h-screen fixed z-10 visible opacity-100;
+  }
+  .dark_bg {
+    @apply bg-black/85 inset-0 m-0 w-screen h-screen z-50 absolute visible opacity-100;
   }
   .circle {
     @apply rounded-full border flex items-center justify-center;
@@ -177,5 +183,32 @@
   .ltf-right {
     direction: ltr;
     text-align: left;
+  }
+  .loader {
+    display: block;
+    position: relative;
+    height: 20px;
+    width: 30%;
+    border: 3px solid #059669;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    top: 50%;
+  }
+  .loader:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    @apply bg-gradient-to-r from-orange-200 to-orange-300;
+    animation: 3s prog ease-in infinite;
+  }
+
+  @keyframes prog {
+    to {
+      width: 100%;
+    }
   }
 }
