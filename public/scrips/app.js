@@ -16,6 +16,8 @@ const shoppingCard = $.querySelector('.shopping_card');  // shopping icon in mob
 const shoppingNav = $.querySelector('.shopping');  // shopping area in mobile
 const closeShoppingBtn = $.querySelector('.close_shopping-btn');  // close icon in shopping 
 const shoppingCardInNavMenu = $.querySelector('#nav_shopping_card');  // shopping icon when you open burger menu
+const eyeBtn = $.querySelector('.show-pass');  //
+const PassInput = $.querySelector('.pass_input');  //
 // widely use function
 function overlayAdd() {
     overlay.classList.remove('overlay_close')
@@ -128,13 +130,47 @@ $.addEventListener('DOMContentLoaded', function () {
 
     })
 })
-// add event for page load  
-$.body.classList.add('overflow-hidden')
-window.addEventListener('load', function () {
-    setTimeout(function () {
-        darkBg.classList.remove('dark_bg')
-        darkBg.classList.add('dark_bg_close')
-        $.body.classList.remove('overflow-hidden')
+// add event for page load
+// $.body.classList.add('overflow-hidden')
+// window.addEventListener('load', function () {
+//     setTimeout(function () {
+//         darkBg.classList.remove('dark_bg')
+//         darkBg.classList.add('dark_bg_close')
+//         $.body.classList.remove('overflow-hidden')
 
-    }, 3000)
+//     }, 3000)
+// })
+
+const getAllInputGroup = $.querySelectorAll('.form_group')
+
+getAllInputGroup.forEach(function (group) {
+    let input = group.querySelector('input')
+    let label = group.querySelector('label')
+
+    input.addEventListener('focus', function () {
+        label.classList.remove('top-[25%]', 'right-3')
+        label.classList.add('label_active')
+    })
+    input.addEventListener('blur', function () {
+        if (input.value) {
+            label.classList.remove('top-[25%]', 'right-3')
+            label.classList.add('label_active')
+        } else {
+            label.classList.add('top-[25%]', 'right-3')
+            label.classList.remove('label_active')
+        }
+    })
+})
+let getEyeIcon = $.querySelector('#svg')
+eyeBtn.addEventListener('click', function () {
+    if (eyeBtn.id === 'pass_input') {
+        PassInput.setAttribute('type', 'text')
+        eyeBtn.removeAttribute('id')
+        getEyeIcon.setAttribute('href', '#eye_dash')
+    } else {
+        PassInput.setAttribute('type', 'password')
+        eyeBtn.setAttribute('id', 'pass_input')
+        getEyeIcon.setAttribute('href', '#normal-eye')
+    }
+
 })

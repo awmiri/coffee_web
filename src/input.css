@@ -211,4 +211,10 @@
       width: 100%;
     }
   }
+  .label_active {
+    top: -11px;
+    right: 25px;
+    font-size: 13px;
+    color: #a1a1aa;
+  }
 }
