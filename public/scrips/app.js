@@ -174,3 +174,26 @@ eyeBtn.addEventListener('click', function () {
     }
 
 })
+
+let haveAccount = $.querySelector('.have-account')
+let createAccount = $.querySelector('.dont-have_account')
+let singUp = $.querySelector('.sing-up')
+let login = $.querySelector('.login-up')
+let container = $.querySelector('.login-form-container')
+haveAccount.addEventListener('click', function (e) {
+    e.preventDefault()
+    container.classList.add('rotate')
+    singUp.classList.add('hidden')
+    login.classList.remove('hidden')
+    login.classList.add('rotate')
+})
+createAccount.addEventListener('click', function (e) {
+    e.preventDefault()
+    container.classList.remove('rotate')
+    singUp.classList.remove('hidden')
+    login.classList.add('hidden')
+    login.classList.remove('rotate')
+})
+
+let getLoginBtn = $.querySelector('.enter')
+getLoginBtn.addEventListener('click', function () { })

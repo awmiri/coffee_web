@@ -1086,6 +1086,10 @@ html.dark .services_line::before,
   left: 0px;
 }
 
+.left-3 {
+  left: 0.75rem;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -1118,8 +1122,12 @@ html.dark .services_line::before,
   top: 100%;
 }
 
-.left-3 {
-  left: 0.75rem;
+.left-1\/2 {
+  left: 50%;
+}
+
+.left-25 {
+  left: 6.25;
 }
 
 .z-20 {
@@ -1128,6 +1136,10 @@ html.dark .services_line::before,
 
 .z-50 {
   z-index: 50;
+}
+
+.m-auto {
+  margin: auto;
 }
 
 .mx-auto {
@@ -1985,10 +1997,6 @@ html.dark .services_line::before,
   padding: 1.25rem;
 }
 
-.p-1 {
-  padding: 0.25rem;
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -2341,6 +2349,16 @@ html.dark .services_line::before,
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.rotate {
+  transform: rotateY(180deg);
+  transition: all 180ms ease-in;
+}
+
+.revers_rotate {
+  transform: rotateY(-180deg);
+  transition: all 180ms ease-in;
 }
 
 .hover\:bg-teal-700:hover {

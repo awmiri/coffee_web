@@ -267,7 +267,7 @@
                 <!-- devide -->
                 <span class=" w-px h-14 bg-white/20"></span>
                 <!-- login btn-->
-                <a href="#" class=" flex items-center gap-2.5 ">
+                <a href="#" class="enter flex items-center gap-2.5 ">
                     <svg class="w-8 h-8"> 
                         <use href="#arrow-right-end-on-rectangle"></use>
                     </svg>
@@ -1971,28 +1971,54 @@
         </div>
       </footer>
 
-      <div class="mt-44 w-[500px] p-5 mx-auto mb-6 rounded-xl bg-gray-200">
-        <h3 class="text-center font-MorabbaMedium text-3xl text texr-zinc-700">ثبت‌نام</h3>
-        <form action="" class="w-full mt-3">
-            <div class="form_group mb-5 relative">
-                <input type="text" placeholder=" " class="w-full h-12 rounded-full p-2 border-none outline-none font-DanaMedium text-base">
-                <label for="name" class="absolute top-[25%] right-3 font-DanaDemiBold pointer-events-none transition-all">نام‌و‌نام‌خانوادگی</label>
-            </div>
-            <div class="form_group mb-5 relative">
-                <input type="tel" placeholder=" "   class="w-full h-12 rounded-full p-2 border-none outline-none font-DanaMedium text-base rtl:text-right">
-                <label for="phone" class="absolute top-[25%] right-3 font-DanaDemiBold pointer-events-none transition-all">شماره‌همراه</label>
-            </div>
-            <div class="form_group mb-5 relative">
-                <input type="password" placeholder=" " class="pass_input w-full h-12 rounded-full p-2 border-none outline-none font-DanaMedium text-base">
-                <svg id="pass_input" class="show-pass w-5 h-5 absolute top-[25%] left-3">
-                    <use id="svg" href="#normal-eye"></use>
-                </svg>
-                <label for="password" class="absolute top-[25%] right-3 font-DanaDemiBold pointer-events-none transition-all">رمز‌عبور</label>
-            </div>
-            <button class="w-full h-12 rounded-full bg-teal-600 text-white">ثبت‌نام</button>
-        </form>
-        <a href="#" class="text-center inline-block w-full mt-4 hover:underline hover:text-sky-500 text-zinc-700 font-MorabbaLight text-xl">اکانت‌دارم</a>
-      </div>
+     <div class=" absolute  w-full h-full flex items-center justify-between">
+        <div class="login-form-container mt-44
+        mb-6 relative transition-all">
+        <!-- sing up  -->
+        <div class="sing-up w-[500px] p-5 rounded-xl bg-gray-200 absolute">
+            <h3 class="text-center font-MorabbaMedium text-3xl text texr-zinc-700">ثبت‌نام</h3>
+            <form action="" class="w-full mt-3">
+                <div class="form_group mb-5 relative">
+                    <input type="text" placeholder=" " class="w-full h-12 rounded-full p-2 border-none outline-none font-DanaMedium text-base">
+                    <label for="name" class="absolute top-[25%] right-3 font-DanaDemiBold pointer-events-none transition-all">نام‌و‌نام‌خانوادگی</label>
+                </div>
+                <div class="form_group mb-5 relative">
+                    <input type="tel" placeholder=" "   class="w-full h-12 rounded-full p-2 border-none outline-none font-DanaMedium text-base rtl:text-right">
+                    <label for="phone" class="absolute top-[25%] right-3 font-DanaDemiBold pointer-events-none transition-all">شماره‌همراه</label>
+                </div>
+                <div class="form_group mb-5 relative">
+                    <input type="password" placeholder=" " class="pass_input w-full h-12 rounded-full p-2 border-none outline-none font-DanaMedium text-base">
+                    <svg id="pass_input" class="show-pass w-5 h-5 absolute top-[25%] left-3">
+                        <use id="svg" href="#normal-eye"></use>
+                    </svg>
+                    <label for="password" class="absolute top-[25%] right-3 font-DanaDemiBold pointer-events-none transition-all">رمز‌عبور</label>
+                </div>
+                <button class="w-full h-12 rounded-full bg-teal-600 text-white">ثبت‌نام</button>
+            </form>
+            <a href="#" class="have-account text-center inline-block w-full mt-4 hover:underline hover:text-sky-500 text-zinc-700 font-MorabbaLight text-xl">اکانت‌دارم</a>
+        </div>
+        <!-- login up  -->
+        <div class="login-up w-[500px] p-5 rounded-xl bg-gray-200 absolute hidden">
+            <h3 class="text-center font-MorabbaMedium text-3xl text texr-zinc-700">ورود</h3>
+            <form action="" class="w-full mt-3">
+                <div class="form_group mb-5 relative">
+                    <input type="tel" placeholder=" "   class="w-full h-12 rounded-full p-2 border-none outline-none font-DanaMedium text-base rtl:text-right">
+                    <label for="phone" class="absolute top-[25%] right-3 font-DanaDemiBold pointer-events-none transition-all">شماره‌همراه</label>
+                </div>
+                <div class="form_group mb-5 relative">
+                    <input type="password" placeholder=" " class="pass_input w-full h-12 rounded-full p-2 border-none outline-none font-DanaMedium text-base">
+                    <svg id="pass_input" class="show-pass w-5 h-5 absolute top-[25%] left-3">
+                        <use id="svg" href="#normal-eye"></use>
+                    </svg>
+                    <label for="password" class="absolute top-[25%] right-3 font-DanaDemiBold pointer-events-none transition-all">رمز‌عبور</label>
+                </div>
+                <button class="w-full h-12 rounded-full bg-teal-600 text-white">ورود</button>
+            </form>
+            <a href="#" class="dont-have_account text-center inline-block w-full mt-4 hover:underline hover:text-sky-500 text-zinc-700 font-MorabbaLight text-xl">ساخت اکانت</a>
+        </div>
+        </div>            
+     </div>
+      
     <div class="dark_bg hidden">
         <span class="loader"></span>
     </div>

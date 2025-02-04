@@ -218,3 +218,12 @@
     color: #a1a1aa;
   }
 }
+
+.rotate {
+  transform: rotateY(180deg);
+  transition: all 180ms ease-in;
+}
+.revers_rotate {
+  transform: rotateY(-180deg);
+  transition: all 180ms ease-in;
+}
